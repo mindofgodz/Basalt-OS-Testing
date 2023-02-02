@@ -1,6 +1,6 @@
 local basalt = require("basalt") -- we need basalt here
 
-local main = basalt.createFrame():setTheme({FrameBG = colors.lightGray, FrameFG = colors.black}) -- we change the default bg and fg color for frames
+local main = basalt.createFrame():setTheme({FrameBG = colors.lightBlue, FrameFG = colors.blue}) -- we change the default bg and fg color for frames
 
 local mFrame = basalt.createFrame():setMonitor("left")
 
@@ -19,7 +19,7 @@ local function openSubFrame(id) -- we create a function which switches the frame
     end
 end
 
-local menubar = main:addMenubar():setScrollable() -- we create a menubar in our main frame.
+local menubar = mFrame:addMenubar():setScrollable() -- we create a menubar in our main frame.
     :setSize("parent.w")
     :onChange(function(self, val)
         openSubFrame(self:getItemIndex()) -- here we open the sub frame based on the table index

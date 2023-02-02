@@ -2,7 +2,7 @@ local basalt = require("basalt") -- we need basalt here
 
 local main = basalt.createFrame():setTheme({FrameBG = colors.lightBlue, FrameFG = colors.blue}) -- we change the default bg and fg color for frames
 
-local mFrame = basalt.createFrame():setMonitor("left")
+local mFrame = basalt.createFrame():setMonitor("left"):setTheme({FrameBG = colors.lightBlue, FrameFG = colors.blue})
 
 local sub = { -- here we create a table where we gonna add some frames
     mFrame:addFrame():setPosition(1, 2):setSize("parent.w", "parent.h - 1"), -- obviously the first one should be shown on program start
